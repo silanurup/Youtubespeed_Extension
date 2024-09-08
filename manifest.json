@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Simple YouTube Logger",
+  "version": "1.0",
+  "description": "Logs a message when a YouTube page is loaded.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
